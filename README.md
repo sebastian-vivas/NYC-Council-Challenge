@@ -1,9 +1,9 @@
-```markdown
 # NYC Council Dashboard Setup Guide
 
 ## Setup Instructions
 
 ### Backend Setup
+
 1. Navigate to the main directory:
 
 ```bash
@@ -86,4 +86,3 @@ npm start
 * **Justin Brannan (District 43)**
    * Username: `jbrannan`
    * Password: `brannan-43`
-```
