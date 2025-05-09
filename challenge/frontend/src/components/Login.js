@@ -33,7 +33,7 @@ const Login = ({ onLoginSuccess }) => {
   return (
     <div className="login-container">
       <div className="login-form-wrapper">
-        <h1>NYC Council Dashboard</h1>
+        <img src="nyccouncil.png" width="100%" />
         <h2>Council Member Login</h2>
         
         <form onSubmit={handleSubmit}>

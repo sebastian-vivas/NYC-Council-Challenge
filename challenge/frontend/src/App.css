@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #0a1d3b;
+  background-color: #F9F9F9;
   padding: 20px;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 button {
-  background-color: #0a1d3b;
+  background-color: #2F56A6;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover {
-  background-color: #173560;
+  background-color: #23417D;
 }
 
 button:disabled {
@@ -138,11 +138,11 @@ button:disabled {
 
 .logout-button {
   width: auto;
-  background-color: #e74c3c;
+  background-color: #2F56A6;
 }
 
 .logout-button:hover {
-  background-color: #c0392b;
+  background-color: #23417D;
 }
 
 .stats-container {
@@ -194,7 +194,7 @@ button:disabled {
 }
 
 .view-controls button.active {
-  background-color: #173560;
+  background-color: #23417D;
   font-weight: bold;
 }
 
