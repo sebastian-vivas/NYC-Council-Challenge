@@ -2,7 +2,7 @@
 
 ## Setup Instructions
 
-### Backend Setup
+### Backend Setup (Python 2.x)
 
 1. Navigate to the main directory:
 
@@ -34,6 +34,38 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+
+### Backend Setup (Python 3.x)
+
+1. Navigate to the main directory:
+
+```bash
+cd challenge
+```
+
+2. Install required Python packages:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+3. Run migrations and populate the database:
+
+```bash
+python3 manage.py migrate
+python3 manage.py populate_db
+```
+
+4. (Optional) Create a superuser to access the admin panel:
+
+```bash
+python3 manage.py createsuperuser
+```
+
+5. Start the Django development server:
+
+```bash
+python3 manage.py runserver
 
 ### Frontend Setup
 1. Navigate to the frontend directory:
