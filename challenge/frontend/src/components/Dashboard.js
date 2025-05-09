@@ -6,6 +6,7 @@ const Dashboard = ({ token, onLogout }) => {
   const [error, setError] = useState('');
   
   const [allComplaints, setAllComplaints] = useState([]);
+  const [constituentComplaints, setConstituentComplaints] = useState([]);
   const [openCases, setOpenCases] = useState([]);
   const [closedCases, setClosedCases] = useState([]);
   const [topComplaints, setTopComplaints] = useState([]);
@@ -49,7 +50,7 @@ const Dashboard = ({ token, onLogout }) => {
     setLoading(true);
     try {
       const response = await axios.get('http://localhost:8000/api/complaints/constituentComplaints/');
-      setAllComplaints(response.data);
+      setConstituentComplaints(response.data);
       setCurrentView('constituent');
     } catch (err) {
       console.error('Error fetching constituent complaints:', err);
@@ -86,6 +87,9 @@ const Dashboard = ({ token, onLogout }) => {
       </div>
     );
   }
+
+  // Determine which complaints to display based on current view
+  const complaintsToDisplay = currentView === 'all' ? allComplaints : constituentComplaints;
   
   return (
     <div className="dashboard-container">
@@ -158,8 +162,8 @@ const Dashboard = ({ token, onLogout }) => {
               </tr>
             </thead>
             <tbody>
-              {allComplaints.length > 0 ? (
-                allComplaints.map((complaint) => (
+              {complaintsToDisplay.length > 0 ? (
+                complaintsToDisplay.map((complaint) => (
                   <tr key={complaint.unique_key}>
                     <td>{complaint.complaint_type || 'N/A'}</td>
                     <td>{complaint.descriptor || 'N/A'}</td>
